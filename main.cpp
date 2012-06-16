@@ -2,16 +2,18 @@
 #include <GL/glut.h>
 
 
-double putar = 0.0;
-double besar = -15.0;
+double putar = -10.0;
+double besar = -20.0;
+
 
 void piramid(double putar) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0.0f, 0.0f, besar);
     glRotatef(putar, 0.0f, 1.0f, 0.0f);
-
-    //lantai
+    
+    
+  //lantai
     glPushMatrix();
     glScaled(0.8, 0.03, 0.8);
     glTranslatef(0.0, -30.2, 0.0);
@@ -19,6 +21,18 @@ void piramid(double putar) {
     glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
     glutSolidCube(7.0);
     glPopMatrix();
+    
+    //atap
+    glPushMatrix();
+    glScaled(0.8, 1.0, 0.8);
+    glTranslatef(0.0, -0.8, 0.0);
+    glRotated(45, 0, 1, 0);
+    glRotated(-90, 1, 0, 0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCone(4.5, 2, 4, 1);
+    glPopMatrix();
+
     
      //lantai ungu kanan
     glPushMatrix();
@@ -47,6 +61,15 @@ void piramid(double putar) {
     glutSolidCube(10.0);
     glPopMatrix();
     
+    //kepala kiri
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(19.5, -5.2, 58.2);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidSphere(2.5,20,50);
+    glPopMatrix();
+    
     //kaki kanan objek kanan
     glPushMatrix();
     glScaled(0.1, 0.03, 0.15);
@@ -64,6 +87,7 @@ void piramid(double putar) {
     glutSolidCube(2.0);
     glPopMatrix();
     
+    
     //badan kiri
     glPushMatrix();
     glScaled(0.05, 0.03, 0.08);
@@ -71,6 +95,15 @@ void piramid(double putar) {
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3f(0.5, 0.2, 0.7);
     glutSolidCube(10.0);
+    glPopMatrix();
+    
+    //kepala kiri
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(-19.5, -5.2, 58.2);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidSphere(2.5,20,50);
     glPopMatrix();
     
      //kaki kiri objek kiri
@@ -90,17 +123,43 @@ void piramid(double putar) {
     glutSolidCube(2.0);
     glPopMatrix();
     
-    //atap
+    //mata kanan kanan
     glPushMatrix();
-    glScaled(0.8, 1.0, 0.8);
-    glTranslatef(0.0, -0.8, 0.0);
-    glRotated(45, 0, 1, 0);
-    glRotated(-90, 1, 0, 0);
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(20.8, -4.8, 60.5);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
-    glutSolidCone(4.5, 2, 4, 1);
+    glColor3f(7.0, 5.0, 9.0);
+    glutSolidSphere(0.5,20,50);
     glPopMatrix();
-
+    
+    //mata kanan kiri
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(18.8, -4.8, 60.5);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(7.0, 5.0, 9.0);
+    glutSolidSphere(0.5,20,50);
+    glPopMatrix();
+    
+    //mata kiri kiri
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(-20.8, -4.8, 60.5);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(7.0, 5.0, 9.0);
+    glutSolidSphere(0.5,20,50);
+    glPopMatrix();
+    
+    //mata kiri kanan
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(-18.8, -4.8, 60.5);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(7.0, 5.0, 9.0);
+    glutSolidSphere(0.5,20,50);
+    glPopMatrix();
+      
+             
     glFlush();
     glutSwapBuffers();
 }
