@@ -158,6 +158,151 @@ void piramid(double putar) {
     glColor3f(7.0, 5.0, 9.0);
     glutSolidSphere(0.5,20,50);
     glPopMatrix();
+    
+    //lantai tiang kanan depan bawah
+    glPushMatrix();
+    glScaled(0.3, 0.09, 0.3);
+    glTranslatef(11.5, -10.0, 22.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kiri depan bawah
+    glPushMatrix();
+    glScaled(0.3, 0.09, 0.3);
+    glTranslatef(-11.5, -10.0, 22.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kiri belakang bawah
+    glPushMatrix();
+    glScaled(0.3, 0.09, 0.3);
+    glTranslatef(-11.5, -10.0, -22.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    
+    //lantai tiang kiri belakang bawah
+    glPushMatrix();
+    glScaled(0.3, 0.09, 0.3);
+    glTranslatef(11.5, -10.0, -22.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kanan depan atas
+    glPushMatrix();
+    glScaled(0.2, 0.06, 0.2);
+    glTranslatef(17.25, 7.0, 33.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kiri depan atas
+    glPushMatrix();
+    glScaled(0.2, 0.06, 0.2);
+    glTranslatef(-17.25, 7.0, 33.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kiri belakang atas
+    glPushMatrix();
+    glScaled(0.2, 0.06, 0.2);
+    glTranslatef(-17.25, 7.0, -33.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //lantai tiang kanan belakang atas
+    glPushMatrix();
+    glScaled(0.2, 0.06, 0.2);
+    glTranslatef(17.25, 7.0, -33.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.2, 0.2, 0.1);
+    glutSolidCube(1.0);
+    glPopMatrix();
+    
+    //batang tiang kanan depan
+    glPushMatrix();
+    glScaled(0.1, 1.3, 0.1);
+    glTranslatef(34.5, -0.2, 66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.1, 0.2, 0.5);
+    glutSolidCube(1.0);
+   glPopMatrix();
+   
+   //batang tiang kiri depan
+    glPushMatrix();
+    glScaled(0.1, 1.3, 0.1);
+    glTranslatef(-34.5, -0.2, 66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.1, 0.2, 0.5);
+    glutSolidCube(1.0);
+   glPopMatrix();
+   
+   //batang tiang kiri belakang
+    glPushMatrix();
+    glScaled(0.1, 1.3, 0.1);
+    glTranslatef(-34.5, -0.2, -66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.1, 0.2, 0.5);
+    glutSolidCube(1.0);
+   glPopMatrix();
+   
+   //batang tiang kanan belakang
+    glPushMatrix();
+    glScaled(0.1, 1.3, 0.1);
+    glTranslatef(34.5, -0.2, -66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.1, 0.2, 0.5);
+    glutSolidCube(1.0);
+   glPopMatrix();
+   
+   //lampu kanan depan
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(34.5, 6.4, 66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(9.0, 9.0, 1.0);
+    glutSolidSphere(2.0,20,50);
+    glPopMatrix();
+    
+    //lampu kiri depan
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(-34.5, 6.4, 66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(9.0, 9.0, 1.0);
+    glutSolidSphere(2.0,20,50);
+    glPopMatrix();
+    
+    //lampu kiri belakang
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(-34.5, 6.4, -66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(9.0, 9.0, 1.0);
+    glutSolidSphere(2.0,20,50);
+    glPopMatrix();
+    
+    //lampu kanan belakang
+    glPushMatrix();
+    glScaled(0.1, 0.1, 0.1);
+    glTranslatef(34.5, 6.4, -66.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(9.0, 9.0, 1.0);
+    glutSolidSphere(2.0,20,50);
+    glPopMatrix();
       
              
     glFlush();
