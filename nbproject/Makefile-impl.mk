@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=piramid tugas besar
+PROJECTNAME=tes
 
 # Active Configuration
 DEFAULTCONF=Debug

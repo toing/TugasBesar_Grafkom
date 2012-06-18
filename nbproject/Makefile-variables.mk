@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW_1-Windows
-CND_ARTIFACT_NAME_Debug=piramid_tugas_besar
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_1-Windows/piramid_tugas_besar
+CND_ARTIFACT_NAME_Debug=tes
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_1-Windows/tes
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_1-Windows/package
-CND_PACKAGE_NAME_Debug=piramidtugasbesar.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/piramidtugasbesar.tar
+CND_PACKAGE_NAME_Debug=tes.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/tes.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW_1-Windows
-CND_ARTIFACT_NAME_Release=piramid_tugas_besar
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/piramid_tugas_besar
+CND_ARTIFACT_NAME_Release=tes
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/tes
 CND_PACKAGE_DIR_Release=dist/Release/MinGW_1-Windows/package
-CND_PACKAGE_NAME_Release=piramidtugasbesar.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/piramidtugasbesar.tar
+CND_PACKAGE_NAME_Release=tes.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/tes.tar
 #
 # include compiler specific variables
 #

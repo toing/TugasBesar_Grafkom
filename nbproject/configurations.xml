@@ -12,7 +12,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>balon.bmp</itemPath>
+      <itemPath>grass.bmp</itemPath>
+      <itemPath>heightmap.bmp</itemPath>
+      <itemPath>heightmapAir.bmp</itemPath>
+      <itemPath>heightmapTanah.bmp</itemPath>
+      <itemPath>imageloader.cpp</itemPath>
+      <itemPath>imageloader.h</itemPath>
+      <itemPath>kotak.bmp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>vec3f.cpp</itemPath>
+      <itemPath>vec3f.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
