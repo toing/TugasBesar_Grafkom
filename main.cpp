@@ -782,6 +782,125 @@ void batu(void){
   
 }
 
+void onta(void) {
+    GLUquadricObj * pObj;
+    pObj = gluNewQuadric();
+    gluQuadricNormals(pObj, GLU_SMOOTH);
+	//badan utama
+	glPushMatrix();
+	glColor3ub(248, 202, 78);
+	glTranslatef(7.0, 10.0,70.3);
+	glScalef(5.5, 3.5, 4.0);
+	glutSolidSphere(0.5, 20, 30);
+	glPopMatrix();
+        
+        // kaki 
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(8.2, 10.0,71.3);
+        glRotated(90,1,0,0);
+        glRotated(10,0,1,0);
+	gluCylinder(pObj,0.8, 0.25, 4.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(8.2, 10.0,69.3);
+        glRotated(90,1,0,0);
+        glRotated(340,0,1,0);
+	gluCylinder(pObj,0.8, 0.25, 4.0, 25.0, 25.0);
+	glPopMatrix();        
+
+        
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(5.3, 10.0,69.3);
+        glRotated(90,1,0,0);
+        glRotated(10,0,1,0);
+	gluCylinder(pObj,0.5, 0.25, 4.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(5.3, 10.0,71.3);
+        glRotated(90,1,0,0);
+        glRotated(340,0,1,0);
+	gluCylinder(pObj,0.5, 0.25, 4.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        //buntut
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(9.3, 10.0,70.3);
+        glRotated(90,1,0,0);
+        glRotated(30,0,1,0);
+	gluCylinder(pObj,0.20, 0.20, 3.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        //leher
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(5.3, 10.5,70.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+	gluCylinder(pObj,0.50, 0.50, 2.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(3.9, 9.5,70.3);
+        glRotated(90,1,0,0);
+        glRotated(220,0,1,0);
+	gluCylinder(pObj,0.50, 0.50, 1.8, 25.0, 25.0);
+	glPopMatrix();
+        
+        
+        //kepala
+	glPushMatrix();
+	glColor3ub(248, 202, 78);
+	glTranslatef(2.8, 11.0,70.3);
+	glScalef(1.7, 1.5, 1.5);
+	glutSolidSphere(0.5, 20, 30);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glTranslatef(2.5, 10.9,70.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+	gluCylinder(pObj,0.70, 0.50, 0.7, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+	glColor3ub(248, 202, 78);
+	glTranslatef(2.0, 10.6,70.3);
+	glScalef(1.0, 1.0, 1.0);
+	glutSolidSphere(0.5, 20, 30);
+	glPopMatrix();
+        
+        //punggung
+        glPushMatrix();
+	glColor3ub(248, 202, 78);
+	glTranslatef(6.0, 10.8,70.3);
+	glScalef(2.0, 3.0, 3.0);
+	glutSolidSphere(0.5, 20.0, 40.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+	glColor3ub(245, 250, 240);
+	glTranslatef(2.5, 11.5,70.6);
+	glScalef(0.5, 0.5, 0.5);
+	glutSolidSphere(0.5, 20.0, 40.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+	glColor3ub(245, 250, 240);
+	glTranslatef(2.5, 11.5,70.0);
+	glScalef(0.5, 0.5, 0.5);
+	glutSolidSphere(0.5, 20.0, 40.0);
+	glPopMatrix();
+}
 
 //awan
 void awan(void){
@@ -897,7 +1016,25 @@ glScalef(51.2, 1.8, 1.4);
 batu();
 glPopMatrix();
 
+//onta
+glPushMatrix();
+glTranslatef(-70.0,-7.0,100.3);
+glRotated(90,0,1,0);
+onta();
+glPopMatrix();
 
+
+glPushMatrix();
+glTranslatef(-180.0,-7.0,30.0);
+glRotated(90,0,1,0);
+onta();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(80.0,-7.0,-50.0);
+glRotated(10,0,1,0);
+onta();
+glPopMatrix();
 //awan
 glPushMatrix();
 glTranslatef(-75, 110, -120);
