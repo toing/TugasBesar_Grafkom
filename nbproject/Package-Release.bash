@@ -6,15 +6,15 @@
 
 # Macros
 TOP=`pwd`
-CND_PLATFORM=MinGW_1-Windows
+CND_PLATFORM=MinGW-Windows
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tes
-OUTPUT_BASENAME=tes
-PACKAGE_TOP_DIR=tes/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tugasgrafkom
+OUTPUT_BASENAME=tugasgrafkom
+PACKAGE_TOP_DIR=tugasgrafkom/
 
 # Functions
 function checkReturnCode
@@ -59,15 +59,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/tes/bin"
+makeDirectory "${NBTMPDIR}/tugasgrafkom/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/tes.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/tugasgrafkom.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/tes.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/tugasgrafkom.tar *
 checkReturnCode
 
 # Cleanup

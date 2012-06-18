@@ -775,9 +775,37 @@ void tambahan(void){
     
  }
 
+void batu(void){
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.66, 0.508, 0.344);
+    glutSolidIcosahedron();
+  
+}
 
 
-
+//awan
+void awan(void){
+glPushMatrix(); 
+glColor3ub(153, 223, 255);
+glutSolidSphere(10, 50, 50);
+glPopMatrix();
+glPushMatrix();
+glTranslatef(10,0,1);
+glutSolidSphere(5, 50, 50);
+glPopMatrix();   
+glPushMatrix();
+glTranslatef(-2,6,-2);
+glutSolidSphere(7, 50, 50);
+glPopMatrix();   
+glPushMatrix();
+glTranslatef(-10,-3,0);
+glutSolidSphere(7, 50, 50);
+glPopMatrix();  
+glPushMatrix();
+glTranslatef(6,-2,2);
+glutSolidSphere(7, 50, 50);
+glPopMatrix();      
+}
 
 
 void display(void){
@@ -813,6 +841,8 @@ void display(void){
 	drawSceneTanah(_terrainTanah, 0.7f, 0.2f, 0.1f);
 	glPopMatrix();
 
+
+
 //tambahan
 glPushMatrix();
 glTranslatef(0,8,0); 
@@ -820,7 +850,134 @@ glScalef(10, 10, 10);
 tambahan();
 glPopMatrix();
 
-//piramid
+glPushMatrix();
+glTranslatef(-30.5,0.0,90.0); 
+glScalef(15.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(30.5,0.0,90.0); 
+glScalef(15.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(17.5,0.0,111.2);
+glRotated(90, 0, 1, 0); 
+glScalef(25.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-17.5,0.0,111.2);
+glRotated(90, 0, 1, 0); 
+glScalef(25.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(43.5,0.0,4.8);
+glRotated(90, 0, 1, 0); 
+glScalef(100.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-43.5,0.0,4.8);
+glRotated(90, 0, 1, 0); 
+glScalef(100.3, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+
+glPushMatrix();
+glTranslatef(0.0,0.0,-80.5); 
+glScalef(51.2, 1.8, 1.4);
+batu();
+glPopMatrix();
+
+
+//awan
+glPushMatrix();
+glTranslatef(-75, 110, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-45, 110, -115);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-50, 120, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-140, 90, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-155, 90, -115);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-130, 110, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-190, 110, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-175, 120, -115);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-200, 100, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-30, 110, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-35, 95, -115);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-20, 90, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-80, 90, -120);
+glScalef(1.8, 1.0, 1.0);  
+awan();
+glPopMatrix();
+
+//pirami
 glPushMatrix();
 glTranslatef(0,8,0); 
 glScalef(10, 10, 10);
