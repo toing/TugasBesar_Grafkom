@@ -593,7 +593,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.3, 0.09, 0.3);
     glTranslatef(-11.5, -10.0, 22.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -602,7 +602,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.3, 0.09, 0.3);
     glTranslatef(-11.5, -10.0, -22.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -612,7 +612,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.3, 0.09, 0.3);
     glTranslatef(11.5, -10.0, -22.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -621,7 +621,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.2, 0.06, 0.2);
     glTranslatef(17.25, 7.0, 33.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -630,7 +630,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.2, 0.06, 0.2);
     glTranslatef(-17.25, 7.0, 33.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -639,7 +639,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.2, 0.06, 0.2);
     glTranslatef(-17.25, 7.0, -33.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -648,7 +648,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.2, 0.06, 0.2);
     glTranslatef(17.25, 7.0, -33.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -657,7 +657,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.1, 1.3, 0.1);
     glTranslatef(34.5, -0.2, 66.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(96, 67, 11);
     glutSolidCube(1.0);
     glPopMatrix();
@@ -666,7 +666,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.1, 1.3, 0.1);
     glTranslatef(-34.5, -0.2, 66.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(42, 29, 3);
     glutSolidCube(1.0);
    glPopMatrix();
@@ -675,7 +675,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.1, 1.3, 0.1);
     glTranslatef(-34.5, -0.2, -66.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(42, 29, 3);
     glutSolidCube(1.0);
    glPopMatrix();
@@ -684,7 +684,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.1, 1.3, 0.1);
     glTranslatef(34.5, -0.2, -66.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(42, 29, 3);
     glutSolidCube(1.0);
    glPopMatrix();
@@ -693,7 +693,7 @@ void tambahan(void){
     glPushMatrix();
     glScaled(0.1, 0.1, 0.1);
     glTranslatef(34.5, 6.4, 66.0);
-    //glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3ub(252, 243, 169);
     glutSolidSphere(2.0,20,50);
     glPopMatrix();
@@ -721,7 +721,7 @@ void tambahan(void){
     glScaled(0.1, 0.1, 0.1);
     glTranslatef(34.5, 6.4, -66.0);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3ub(252, 243, 169);;
+    glColor3ub(252, 243, 169);
     glutSolidSphere(2.0,20,50);
     glPopMatrix();
     
@@ -788,6 +788,7 @@ void onta(void) {
     gluQuadricNormals(pObj, GLU_SMOOTH);
 	//badan utama
 	glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(248, 202, 78);
 	glTranslatef(7.0, 10.0,70.3);
 	glScalef(5.5, 3.5, 4.0);
@@ -796,6 +797,7 @@ void onta(void) {
         
         // kaki 
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(8.2, 10.0,71.3);
         glRotated(90,1,0,0);
@@ -804,6 +806,7 @@ void onta(void) {
 	glPopMatrix();
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(8.2, 10.0,69.3);
         glRotated(90,1,0,0);
@@ -813,6 +816,7 @@ void onta(void) {
 
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(5.3, 10.0,69.3);
         glRotated(90,1,0,0);
@@ -822,6 +826,7 @@ void onta(void) {
         
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(5.3, 10.0,71.3);
         glRotated(90,1,0,0);
@@ -831,6 +836,7 @@ void onta(void) {
         
         //buntut
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(9.3, 10.0,70.3);
         glRotated(90,1,0,0);
@@ -840,6 +846,7 @@ void onta(void) {
         
         //leher
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(5.3, 10.5,70.3);
         glRotated(90,1,0,0);
@@ -848,6 +855,7 @@ void onta(void) {
 	glPopMatrix();
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(3.9, 9.5,70.3);
         glRotated(90,1,0,0);
@@ -858,6 +866,7 @@ void onta(void) {
         
         //kepala
 	glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(248, 202, 78);
 	glTranslatef(2.8, 11.0,70.3);
 	glScalef(1.7, 1.5, 1.5);
@@ -865,6 +874,7 @@ void onta(void) {
 	glPopMatrix();
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
         glColor3ub(248,202,78);
         glTranslatef(2.5, 10.9,70.3);
         glRotated(90,1,0,0);
@@ -873,6 +883,7 @@ void onta(void) {
 	glPopMatrix();
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(248, 202, 78);
 	glTranslatef(2.0, 10.6,70.3);
 	glScalef(1.0, 1.0, 1.0);
@@ -881,13 +892,16 @@ void onta(void) {
         
         //punggung
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(248, 202, 78);
 	glTranslatef(6.0, 10.8,70.3);
 	glScalef(2.0, 3.0, 3.0);
 	glutSolidSphere(0.5, 20.0, 40.0);
 	glPopMatrix();
         
+        // mata
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(245, 250, 240);
 	glTranslatef(2.5, 11.5,70.6);
 	glScalef(0.5, 0.5, 0.5);
@@ -895,6 +909,7 @@ void onta(void) {
 	glPopMatrix();
         
         glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 	glColor3ub(245, 250, 240);
 	glTranslatef(2.5, 11.5,70.0);
 	glScalef(0.5, 0.5, 0.5);
@@ -905,6 +920,7 @@ void onta(void) {
 //awan
 void awan(void){
 glPushMatrix(); 
+glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 glColor3ub(153, 223, 255);
 glutSolidSphere(10, 50, 50);
 glPopMatrix();
@@ -926,6 +942,104 @@ glutSolidSphere(7, 50, 50);
 glPopMatrix();      
 }
 
+void pohon(void){
+       GLUquadricObj * pObj;
+    pObj = gluNewQuadric();
+    gluQuadricNormals(pObj, GLU_SMOOTH);
+    //BATANG
+        glPushMatrix();
+        glTranslatef(0.0, 28.0,40.3);
+        glRotated(90,1,0,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,1.0, 2.25, 25.0, 25.0, 25.0);
+	glPopMatrix();
+        
+     //ranting   
+        glPushMatrix();
+        glTranslatef(0.0, 20.0,40.3);
+        glRotated(90,1,0,0);
+        glRotated(120,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.8, 0.5, 10.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(0.0, 18.0,40.3);
+        glRotated(90,1,0,0);
+        glRotated(250,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.8, 0.5, 14.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(0.0, 23.0,40.3);
+        glRotated(90,1,0,0);
+        glRotated(250,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.8, 0.5, 3.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        //ranting kecil kanan
+        glPushMatrix();
+        glTranslatef(6.3, 23.7,40.3);
+        glRotated(90,1,0,0);
+        glRotated(50,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.5, 0.3, 2.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(5.3, 23.0,40.3);
+        glRotated(90,1,0,0);
+        glRotated(160,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.5, 0.3, 4.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        //ranting kecil kiri
+        glPushMatrix();
+        glColor3ub(248,202,78);
+        glRotated(90,1,0,0);
+        glRotated(150,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.4, 0.3, 2.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(-10.5, 22.0,40.3);
+        glRotated(90,1,0,0);
+        glRotated(190,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.5, 0.3, 4.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(-5.5, 20.5,40.3);
+        glRotated(90,1,0,0);
+        glRotated(160,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.5, 0.3, 2.0, 25.0, 25.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(-7.5, 20.5,40.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(242, 216, 166);
+	gluCylinder(pObj,0.5, 0.3, 3.5, 25.0, 25.0);
+	glPopMatrix();
+        
+}
 
 void display(void){
 //    glutSwapBuffers();
@@ -1114,6 +1228,18 @@ glScalef(1.8, 1.0, 1.0);
 awan();
 glPopMatrix();
 
+
+//pohon
+glPushMatrix();
+glTranslated(-100.0,-5.0,0.0);
+pohon();
+glPopMatrix();
+
+glPushMatrix();
+glTranslated(100.0,-5.0,0.0);
+pohon();
+glPopMatrix();
+
 //pirami
 glPushMatrix();
 glTranslatef(0,8,0); 
@@ -1187,7 +1313,6 @@ glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 glEnable(GL_DEPTH_TEST);
 glEnable(GL_LIGHTING);
 glEnable(GL_LIGHT0);
-
 glDepthFunc(GL_LESS);
 glEnable(GL_NORMALIZE);
 glEnable(GL_COLOR_MATERIAL);
