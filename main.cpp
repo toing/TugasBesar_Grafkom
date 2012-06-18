@@ -29,7 +29,7 @@ float rot = 0;
 
 GLuint texture[1]; //array untuk texture
 
-struct Images {
+struct Images {//tempat image
 	unsigned long sizeX;
 	unsigned long sizeY;
 	char *data;
@@ -144,7 +144,7 @@ public:
 		}
 
 		//Smooth out the normals
-		const float FALLOUT_RATIO = 0.5f;
+		const float FALLOUT_RATIO = 0.5f;//memperhalus
 		for (int z = 0; z < l; z++) {
 			for (int x = 0; x < w; x++) {
 				Vec3f sum = normals2[z][x];
@@ -189,7 +189,7 @@ public:
 //Loads a terrain from a heightmap.  The heights of the terrain range from
 //-height / 2 to height / 2.
 //load terain di procedure inisialisasi
-Terrain* loadTerrain(const char* filename, float height) {
+Terrain* loadTerrain(const char* filename, float height) {//ngambil file
 	Image* image = loadBMP(filename);
 	Terrain* t = new Terrain(image->width, image->height);
 	for (int y = 0; y < image->height; y++) {
@@ -208,11 +208,11 @@ Terrain* loadTerrain(const char* filename, float height) {
 
 float _angle = 60.0f;
 //buat tipe data terain
-Terrain* _terrain;
+Terrain* _terrain;//pariable terain
 Terrain* _terrainTanah;
 //Terrain* _terrainAir;
 
-void cleanup() {
+void cleanup() {//untuk mehilangin file image
 	delete _terrain;
 	delete _terrainTanah;
 	//delete _terrainAir;
@@ -235,13 +235,13 @@ int ImageLoad(char *filename, Images *image) {
 	// mencari file header bmp
 	fseek(file, 18, SEEK_CUR);
 	// read the width
-	if ((i = fread(&image->sizeX, 4, 1, file)) != 1) {
+	if ((i = fread(&image->sizeX, 4, 1, file)) != 1) {//lebar beda
 		printf("Error reading width from %s.\n", filename);
 		return 0;
 	}
 	//printf("Width of %s: %lu\n", filename, image->sizeX);
 	// membaca nilai height
-	if ((i = fread(&image->sizeY, 4, 1, file)) != 1) {
+	if ((i = fread(&image->sizeY, 4, 1, file)) != 1) {//tingginya beda
 		printf("Error reading height from %s.\n", filename);
 		return 0;
 	}
@@ -251,11 +251,11 @@ int ImageLoad(char *filename, Images *image) {
 	size = image->sizeX * image->sizeY * 3;
 	// read the planes
 	if ((fread(&plane, 2, 1, file)) != 1) {
-		printf("Error reading planes from %s.\n", filename);
+		printf("Error reading planes from %s.\n", filename);//bukan file bmp
 		return 0;
 	}
 	if (plane != 1) {
-		printf("Planes from %s is not 1: %u\n", filename, plane);
+		printf("Planes from %s is not 1: %u\n", filename, plane);//
 		return 0;
 	}
 	// read the bitsperpixel
@@ -265,7 +265,7 @@ int ImageLoad(char *filename, Images *image) {
 		return 0;
 	}
 	if (bpp != 24) {
-		printf("Bpp from %s is not 24: %u\n", filename, bpp);
+		printf("Bpp from %s is not 24: %u\n", filename, bpp);//bukan 24 pixel
 		return 0;
 	}
 	// seek past the rest of the bitmap header.
@@ -273,7 +273,7 @@ int ImageLoad(char *filename, Images *image) {
 	// read the data.
 	image->data = (char *) malloc(size);
 	if (image->data == NULL) {
-		printf("Error allocating memory for color-corrected image data");
+		printf("Error allocating memory for color-corrected image data");//gagal ambil memory
 		return 0;
 	}
 	if ((i = fread(image->data, size, 1, file)) != 1) {
@@ -298,7 +298,7 @@ Images * loadTexture() {
 	// alokasi memmory untuk tekstur
 	image1 = (Images *) malloc(sizeof(Images));
 	if (image1 == NULL) {
-		printf("Error allocating space for image");
+		printf("Error allocating space for image");//memory tidak cukup
 		exit(0);
 	}
 	//pic.bmp is a 64x64 picture
@@ -310,16 +310,16 @@ Images * loadTexture() {
 
 
 
-void initRendering() {
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_COLOR_MATERIAL);
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+void initRendering() {//inisialisasi
+	glEnable(GL_DEPTH_TEST);//kedalaman
+	glEnable(GL_COLOR_MATERIAL);//warna
+	glEnable(GL_LIGHTING);//cahaya
+	glEnable(GL_LIGHT0);//lampu
 	glEnable(GL_NORMALIZE);
 	glShadeModel(GL_SMOOTH);
 }
 
-void drawScene() {
+void drawScene() {//buat terain
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	/*
 	 glMatrixMode(GL_MODELVIEW);
@@ -399,22 +399,7 @@ void drawSceneTanah(Terrain *terrain, GLfloat r, GLfloat g, GLfloat b) {
 
 }
 
-
-void update(int value) {
-
-	glutPostRedisplay();
-	glutTimerFunc(25, update, 0);
-}
-
-/*
-GLuint texture[40];
-void freetexture(GLuint texture) {
-	glDeleteTextures(1, &texture);
-}
-*/
-
-
-GLuint loadtextures(const char *filename, int width, int height) {
+GLuint loadtextures(const char *filename, int width, int height) {//buat ngambil dari file image untuk jadi texture
 	GLuint texture;
 
 	unsigned char *data;
@@ -437,11 +422,11 @@ GLuint loadtextures(const char *filename, int width, int height) {
 
 	fclose(file);
 
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	glGenTextures(1, &texture);//generet (dibentuk)
+	glBindTexture(GL_TEXTURE_2D, texture);//binding (gambung)
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
-			GL_LINEAR_MIPMAP_NEAREST);
+			GL_LINEAR_MIPMAP_NEAREST);//untuk membaca gambar jadi text dan dapat dibaca dengan pixel
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	//glTexParameterf(  GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
 	//glTexParameterf( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
@@ -568,7 +553,7 @@ void tambahan(void){
     glScaled(0.1, 0.03, 0.15);
     glTranslatef(-21.3, -28.2, 40.7);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3f(182, 159, 118);
+    glColor3ub(182, 159, 118);
     glutSolidCube(2.0);
     glPopMatrix();
     //kaki kanan objek kiri 
@@ -576,7 +561,7 @@ void tambahan(void){
     glScaled(0.1, 0.03, 0.15);
     glTranslatef(-18.3, -28.2, 40.7);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3f(182, 159, 118);
+    glColor3ub(182, 159, 118);
     glutSolidCube(2.0);
     glPopMatrix();
     
@@ -1048,7 +1033,7 @@ void display(void){
 
 	glClearColor(0.0, 0.6, 0.8, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-    glLoadIdentity();
+    glLoadIdentity();//reset posisi
 	gluLookAt(viewx, viewy, viewz, 0.0, 0.0, 5.0, 0.0, 1.0, 0.0);
 
 
@@ -1285,7 +1270,7 @@ glPopMatrix();
 
 
 
-    glutSwapBuffers();
+    glutSwapBuffers();//buffeer ke memory
 	glFlush();
 	rot++;
 	angle++;
@@ -1421,17 +1406,6 @@ static void kibor(int key, int x, int y) {
 }
 
 void keyboard(unsigned char key, int x, int y) {
-	if (key == 'd') {
-
-		spin = spin - 1;
-		if (spin > 360.0)
-			spin = spin - 360.0;
-	}
-	if (key == 'a') {
-		spin = spin + 1;
-		if (spin > 360.0)
-			spin = spin - 360.0;
-	}
 	if (key == 'q') {
 		viewz++;
 	}
