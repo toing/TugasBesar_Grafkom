@@ -21,7 +21,7 @@ using namespace std;
 
 float lastx, lasty;
 GLint stencilBits;
-static int viewx = 160;
+static int viewx = 150;
 static int viewy = 80;
 static int viewz = 200;
 
@@ -1024,6 +1024,102 @@ void pohon(void){
 	gluCylinder(pObj,0.5, 0.3, 3.5, 25.0, 25.0);
 	glPopMatrix();
         
+               
+}
+void burung(void){
+    GLUquadricObj * pObj;
+    pObj = gluNewQuadric();
+    gluQuadricNormals(pObj, GLU_SMOOTH);
+    //badan utama
+	glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(248, 232, 52);
+	glTranslatef(0.0, 10.0,70.3);
+	glScalef(1.3, 0.7, 0.8);
+	glutSolidSphere(1.5, 20, 30);
+	glPopMatrix();
+        
+        //leher
+        glPushMatrix();
+        glTranslatef(-1.3, 10.0,70.3);
+        glRotated(90,1,0,0);
+        glRotated(220,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+        glColor3ub(163, 250, 90);
+	gluCylinder(pObj,0.4, 0.2, 1.3, 25.0, 25.0);
+	glPopMatrix();
+        
+        //kepala
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(248, 232, 52);
+	glTranslatef(-2.2, 11.2,70.3);
+	glScalef(0.6, 0.4, 0.4);
+	glutSolidSphere(1.5, 20, 30);
+	glPopMatrix();
+        
+        //rahang
+        glPushMatrix();
+        glTranslatef(-2.8, 11.1,70.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+       glColor3ub(163, 250, 90);
+	gluCylinder(pObj,0.3, 0.1, 0.6, 25.0, 25.0);
+	glPopMatrix();
+        
+        //mata
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(245, 250, 240);
+	glTranslatef(-2.7, 11.6,70.6);
+	glScalef(0.3, 0.3, 0.3);
+	glutSolidSphere(0.5, 20.0, 40.0);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(245, 250, 240);
+	glTranslatef(-2.7, 11.6,70.0);
+	glScalef(0.3, 0.3, 0.3);
+	glutSolidSphere(0.5, 20.0, 40.0);
+	glPopMatrix();
+        
+        //sayap
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(248, 232, 52);
+	glTranslatef(-0.4, 10.0,70.3);
+        //glRotated(90,1,0,0);
+        //glRotated(300,0,1,0);
+	glScalef(0.6, 0.5, 3.8);
+	glutSolidSphere(1.0, 20, 30);
+	glPopMatrix();
+        
+         //ekor
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(163, 250, 90);
+	glTranslatef(2.0, 11.0,70.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+	glScalef(0.2, 0.5, 1.2);
+	glutSolidSphere(1.0, 20, 30);
+	glPopMatrix();
+        
+        glPushMatrix();
+        glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+	glColor3ub(175, 152, 110);
+	glTranslatef(2.0, 10.7,70.3);
+        glRotated(90,1,0,0);
+        glRotated(300,0,1,0);
+	glScalef(0.2, 0.5, 1.2);
+	glutSolidSphere(1.0, 20, 30);
+	glPopMatrix();
+        
+        
+        
+        
 }
 
 void display(void){
@@ -1225,6 +1321,20 @@ glTranslated(100.0,-5.0,0.0);
 pohon();
 glPopMatrix();
 
+
+//burung
+glPushMatrix();
+glTranslatef(-100, 70.0,80.3);
+glRotated(90,0,1,0);
+burung();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(30.0, 90.0,80.3);
+glRotated(90,0,1,0);
+burung();
+glPopMatrix();
+
 //pirami
 glPushMatrix();
 glTranslatef(0,8,0); 
@@ -1271,7 +1381,7 @@ glPopMatrix();
 
 
     glutSwapBuffers();//buffeer ke memory
-	glFlush();
+	glFlush();//memaksa untuk menampilkan
 	rot++;
 	angle++;
 
@@ -1305,7 +1415,6 @@ glDepthFunc(GL_LEQUAL);
 glShadeModel(GL_SMOOTH);
 glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 glEnable(GL_CULL_FACE);
-
 glEnable(GL_TEXTURE_2D);
 glEnable(GL_TEXTURE_GEN_S);
 glEnable(GL_TEXTURE_GEN_T);
@@ -1428,7 +1537,6 @@ glutInitWindowSize(800,600);
 glutInitWindowPosition(100,100);
 glutCreateWindow("kelompok piramid      ");
 init();
-
 glutDisplayFunc(display);
 glutIdleFunc(display);
 glutReshapeFunc(reshape);

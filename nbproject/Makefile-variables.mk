@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW_1-Windows
-CND_ARTIFACT_NAME_Debug=tes
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_1-Windows/tes
+CND_ARTIFACT_NAME_Debug=tugasbesar_grafkom
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_1-Windows/tugasbesar_grafkom
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_1-Windows/package
-CND_PACKAGE_NAME_Debug=tes.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/tes.tar
+CND_PACKAGE_NAME_Debug=tugasbesargrafkom.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/tugasbesargrafkom.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW_1-Windows
-CND_ARTIFACT_NAME_Release=tes
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/tes
+CND_ARTIFACT_NAME_Release=tugasbesar_grafkom
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/tugasbesar_grafkom
 CND_PACKAGE_DIR_Release=dist/Release/MinGW_1-Windows/package
-CND_PACKAGE_NAME_Release=tes.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/tes.tar
+CND_PACKAGE_NAME_Release=tugasbesargrafkom.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/tugasbesargrafkom.tar
 #
 # include compiler specific variables
 #

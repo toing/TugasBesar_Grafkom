@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=tes
+PROJECTNAME=TugasBesar_Grafkom
 
 # Active Configuration
 DEFAULTCONF=Debug
